@@ -14,6 +14,9 @@
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
+img{
+    max-width: 100%;
+}
 .btn-primary{
     background-color: #DD0000;
     padding: 15px 25px;
@@ -38,6 +41,7 @@
 }
 .banner-left{
     padding-left: 45px;
+    flex: 1;
 }
 .banner h1{
     font-weight: bold;
@@ -49,6 +53,9 @@
     font-weight: regular;
     margin: 15px 0;
     max-width: 65%;
+}
+.banner-right{
+    flex: 1;
 }
 .banner-right img{
     display: block;
@@ -76,6 +83,10 @@
 }
 .upcoming-match-right{
     flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
 }
 .upcoming-match-right .card{
     
@@ -105,4 +116,48 @@
     display: flex;
     color: #161616;
     gap: 30px;
+}
+
+
+
+@media screen and (max-width: 992px){
+    .banner p{
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .upcoming-matches{
+        flex-direction: column;
+    }
+    .upcoming-match-left{
+        flex-direction: row;
+        width: 100%;
+        background-color: transparent;
+    }
+    .upcoming-match-left{
+        flex: 1;
+    }
+    .upcoming-match-left .btn-primary{
+        border: 1px solid rgb(232, 232, 232)                                                                                               ;
+    }
+}
+@media screen {
+    
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .banner{
+        flex-direction: column;
+        text-align: center;
+    }
+    .banner .banner-left{
+        margin-bottom: 50px;
+        padding-left: 0;
+        padding-top: 30px;
+    }
+     .banner .banner-left p{
+        margin-bottom: 50px;
+        padding-left: 0;
+        padding-top: 30px;
+        margin: 15px auto;
+    }
 }
